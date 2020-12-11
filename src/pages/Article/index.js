@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 // material-ui
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography, Button, Grid, TextField } from "@material-ui/core";
+import uuid from 'react-uuid'
 
 import ArticleCardList from "./ArticleCardList";
 
@@ -212,7 +213,7 @@ const Article = ({ }) => {
 
         <Box>
           <ArticleCardList
-            key={}
+            key={uuid()}
             postData={articlesData}
             main={false}
           />

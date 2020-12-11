@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import uuid from 'react-uuid'
 
 // material-ui
 import { fade, makeStyles, useTheme } from '@material-ui/core/styles';
@@ -21,6 +22,7 @@ const ArticleCardList = ({ postData, main }) => {
 
             {postData.map(post => {
                 return <ArticleCard
+                    key={uuid()}
                     post={post}
                     main={main}></ArticleCard>
             })}
