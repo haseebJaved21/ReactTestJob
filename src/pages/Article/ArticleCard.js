@@ -52,7 +52,7 @@ const ArticleCard = ({ post, main }) => {
 
   return (
     <Box
-      ml={post.depth * 10}
+      // ml={post.depth * 10}
       width="100%"
     >
       <Grid
@@ -60,15 +60,6 @@ const ArticleCard = ({ post, main }) => {
         xs={12} >
         <Card className={classes.card}
           key={post.id}
-          onClick={() => {
-            if (main) {
-              history.push(`/activity/${post.canonicalUrl}`, {
-                canonicalUrl: post.canonicalUrl,
-                post: post
-              });
-            }
-          }
-          }
         >
           <CardContent className={classes.cardVotes}>
             <Button size="small" color="primary">
